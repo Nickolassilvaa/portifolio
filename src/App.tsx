@@ -1,45 +1,49 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import { Header } from './components/header'
+import { MainContainer } from './components/mainContainer'
+import { TechIcon } from './components/techIcon'
+import { TechList, ITechList } from './services/techList'
+import './styles/main.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
+  return (<>
+    <div className='w-full bg-slate-300 h-auto'>
+      <div className='max-w-5xl mx-auto px-8'>
+        <Header />
+        <MainContainer />
+      </div>
+
+      <div className='
+          flex
+          items-center
+          justify-start
+
+          w-full 
+          h-[15vh] 
+
+          bg-zinc-900
+          text-white
+          
+          px-4
+          gap-4
+          
+          scrollbar-thin
+          scrollbar-thumb-zinc-300 
+          scrollbar-track-zinc-900
+          scrollbar-thumb-rounded-full
+
+          sm:h-[20vh]
+          md:justify-around
+        '>
+
+        {TechList.map((tech: ITechList) => {
+          return (<TechIcon key={tech.id} link={tech.link} _alt={tech._alt} />)
+        })}
+      </div>
     </div>
+  </>
   )
 }
 
 export default App
+
