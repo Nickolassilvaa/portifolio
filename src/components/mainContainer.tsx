@@ -59,7 +59,7 @@ export function MainContainer() {
                         <DownloadSimple size={20} />
                         <Button
                             title="Download CV"
-                            link="/Curriculo/NickolasRodrigues.pdf"
+                            link="./src/assets/curriculo/NickolasRodrigues.pdf"
                             className="underline font-normal"
                         />
                     </div>
