@@ -8,7 +8,8 @@ type RepositoriesType = {
   html_url: string;
   created_at: string;
   language: string;
-  languages_url?: string;
+  languages_url: string;
+  homepage: string;
 };
 
 const getRepositories = async () => {
@@ -40,6 +41,7 @@ export async function RepoContent() {
             html_url={repo.html_url}
             language={repo.language}
             created_at={repo.created_at}
+            homepage={repo.homepage}
           />
         ))}
       </Suspense>
