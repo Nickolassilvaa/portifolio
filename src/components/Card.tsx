@@ -40,7 +40,7 @@ export function Card({
       </div>
       <RepoLanguages url={languages_url} />
       <div className="flex items-center justify-start gap-2">
-        <div className="w-3 h-3 rounded-full bg-green-700" />
+        <div className="w-2 h-2 rounded-full bg-sky-500" />
         <p className="text-xs font-semibold">
           {language ? language : "MarkDown"}
         </p>
