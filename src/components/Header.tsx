@@ -49,23 +49,26 @@ export async function Header() {
             className="flex items-center justify-center gap-2 p-1 border-2 border-transparent hover:text-zinc-500 dark:hover:text-zinc-300 hover:transition-colors"
             href="/nickolas_rodrigues.pdf"
             target="_blank"
+            aria-label="Ler curriculo"
           >
             <span className="underline underline-offset-4">Docs</span>
-            <Paperclip size={16} name="Curriculo" />
+            <Paperclip size={16} />
           </Link>
           <Link
             className="text-sky-600 p-1 border-2 border-transparent hover:text-sky-800 transition-colors"
             href="https://www.linkedin.com/in/nickolasrodrigues"
             target="_blank"
+            aria-label="Ir para LinkedIn"
           >
-            <Linkedin size={20} name="LinkedIn" />
+            <Linkedin size={20} />
           </Link>
           <Link
             className="p-1 border-2 border-transparent"
             href="https://github.com/Nickolassilvaa"
             target="_blank"
+            aria-label="Ir para GitHub"
           >
-            <Github size={20} name="GitHub" />
+            <Github size={20} />
           </Link>
         </div>
         <ToggleTheme />

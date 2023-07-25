@@ -15,7 +15,7 @@ export function AboutContent() {
       </p>
 
       <div className="space-y-2 max-w-2xl text-sm md:text-base">
-        <h3 className="text-xl font-semibold">🚀 Habilidades Técnicas:</h3>
+        <h2 className="text-xl font-semibold">🚀 Habilidades Técnicas:</h2>
         <div className="w-full flex justify-stretch items-center gap-2 flex-wrap">
           {staks.map((stack, index) => (
             <div key={index} className="min-w-fit w-fit py-2 px-4 rounded bg-purple-200 text-sm font-bold text-purple-800">

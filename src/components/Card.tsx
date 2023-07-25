@@ -22,9 +22,9 @@ export function Card({
   return (
     <div className="dark:bg-zinc-800 bg-zinc-200 rounded-lg p-4 space-y-2 md:hover:shadow-xl md:hover:scale-105 transition-transform duration-200">
       <div className="flex items-center justify-between">
-        <Link href={html_url} className="font-bold text-base md:text-xl flex items-center gap-1 hover:underline hover:underline-offset-2" target="_blank">
+        <Link href={html_url} aria-label="Link para repositório" className="font-bold text-base md:text-xl flex items-center gap-1 hover:underline hover:underline-offset-2" target="_blank">
           {name}
-          <LinkIcon size={12} name="Link para repositório"/>
+          <LinkIcon size={12}/>
         </Link>
           
         <div className="flex items-center justify-center gap-4">
@@ -33,12 +33,13 @@ export function Card({
               href={homepage}
               target="_blank"
               className="hover:text-zinc-700 p-2 md:p-0"
+              aria-label="Link para projeto publicado"
             >
-              <Eye size={18} name="Link para projeto publicado"/>
+              <Eye size={18} />
             </Link>
           )}
-          <Link href={html_url} target="_blank" className="hover:text-zinc-700 p-2 md:p-0">
-            <Github size={18} name="GitHub repositório" />
+          <Link href={html_url} target="_blank" className="hover:text-zinc-700 p-2 md:p-0" aria-label="GitHub repositório">
+            <Github size={18} />
           </Link>
         </div>
       </div>
