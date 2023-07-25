@@ -1,15 +1,12 @@
 const getData = async (url: string) => {
-  const response = await fetch(url);
+  const response = await fetch(url, { cache: 'force-cache' });
   return response.json();
 };
 
 export async function RepoLanguages({ url }: { url?: string }) {
-  if(!url) {
-    return null
-  } 
+  if(!url) return null  
   
   const response = await getData(url);
-
   const languages = Object.keys(response);
 
   return (

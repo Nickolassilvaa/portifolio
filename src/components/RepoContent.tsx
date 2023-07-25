@@ -14,8 +14,10 @@ type RepositoriesType = {
 
 const getRepositories = async () => {
   const response = await fetch(
-    "https://api.github.com/users/Nickolassilvaa/repos?sort=created_at"
+    "https://api.github.com/users/Nickolassilvaa/repos?sort=created_at",
+    { cache: 'force-cache' }
   );
+
   return response.json();
 };
 
@@ -33,7 +35,7 @@ export async function RepoContent() {
           </>
         }
       >
-        {repositories.map((repo) => (
+        {repositories.length > 0 ? repositories.map((repo) => (
           <Card
             key={repo.id}
             languages_url={repo.languages_url}
@@ -43,7 +45,13 @@ export async function RepoContent() {
             created_at={repo.created_at}
             homepage={repo.homepage}
           />
-        ))}
+        )) : (
+          <>
+            {[...Array(9)].map((_, index) => (
+              <CardSkeleton key={index}/>
+            ))}
+          </>
+        )}
       </Suspense>
     </div>
   );
