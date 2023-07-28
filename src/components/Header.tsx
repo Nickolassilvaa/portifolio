@@ -11,7 +11,7 @@ interface AvatarType {
 
 const getData = async () => {
   const response = await fetch("https://api.github.com/users/Nickolassilvaa", 
-    { cache: 'force-cache' }
+    { cache: 'default' }
   );
   return response.json();
 };

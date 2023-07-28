@@ -15,7 +15,7 @@ type RepositoriesType = {
 const getRepositories = async () => {
   const response = await fetch(
     "https://api.github.com/users/Nickolassilvaa/repos?sort=created_at",
-    { cache: 'force-cache' }
+    { cache: 'default' }
   );
 
   return response.json();
