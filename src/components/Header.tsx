@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { ToggleTheme } from "./ToggleTheme";
-import { Github, Linkedin, Paperclip, User } from "lucide-react";
+import { Github, Linkedin, Mail, User } from "lucide-react";
 import Link from "next/link";
 import { Suspense } from "react";
 
@@ -47,12 +47,11 @@ export async function Header() {
         <div className="flex items-center justify-center gap-4">
           <Link
             className="flex items-center justify-center gap-2 p-1 border-2 border-transparent hover:text-zinc-500 dark:hover:text-zinc-300 hover:transition-colors"
-            href="/nickolas_rodrigues.pdf"
+            href="mailto:nickolassilvaa@outlook.com.br"
             target="_blank"
             aria-label="Ler curriculo"
           >
-            <span className="underline underline-offset-4">Docs</span>
-            <Paperclip size={16} />
+            <Mail size={20} />
           </Link>
           <Link
             className="text-sky-600 p-1 border-2 border-transparent hover:text-sky-800 transition-colors"

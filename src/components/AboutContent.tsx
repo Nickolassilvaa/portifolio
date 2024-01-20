@@ -1,17 +1,17 @@
 export function AboutContent() {
-  const staks = ["Next.js","ReactJS","Angular","HTML5","CSS","JavaScript",
-    "TypeScript","Tailwind CSS","Styled-Components","SASS","Git","Oracle",
-    "API Rest",
+  const staks = ["Next.js","ReactJS","JavaScript",
+    "TypeScript","Git","Oracle", "SQL Server",
+    "API Rest", "PL/SQL", ".NET", "ASP.NET"
   ];
 
   return (
     <div className="text-justify space-y-4 md:text-lg">
       <p>
-        💼 Sou um Analista Desenvolvedor que cria soluções inovadoras e
-        eficientes. Desenvolvedor frontend com experiência em desenvolvimento e
-        manutenção de aplicações web. Minhas Power skills: colaboração em
-        equipe, resolução de problemas, comunicação clara, adaptabilidade e
-        orientação para o cliente.
+        💼 Atualmente, trabalho com desenvolvimento de ERP e 
+        APIs em um ambiente completamente Microsoft, utilizando o pacote .NET 
+        e SQL Server. Além disso, presto consultoria de desenvolvimento para 
+        empresas que buscam otimizar seus processos e implementar soluções 
+        inovadoras.
       </p>
 
       <div className="space-y-2 max-w-2xl text-sm md:text-base">
